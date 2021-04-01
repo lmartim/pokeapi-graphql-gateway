@@ -7,7 +7,9 @@ export default (app) => {
   const server = new ApolloServer({
     typeDefs,
     resolvers,
-    dataSources
+    dataSources,
+    introspection: true,
+    playground: true
   })
 
   server.applyMiddleware({ app })
